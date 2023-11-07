@@ -12,7 +12,7 @@
 using namespace DBoW2;
 using namespace std;
 
-const int NIMAGES = 2000;
+const int NIMAGES = 500;
 
 void loadFeatures(vector<vector<cv::Mat>> &features);
 void changeStructure(const cv::Mat &plain, vector<cv::Mat> &out);
@@ -29,7 +29,7 @@ void loadFeatures(vector<vector<cv::Mat>> &features)
   for (int i = 0; i < NIMAGES; ++i)
   {
     stringstream ss;
-    ss << "/home/leejaewon/RAIL/dataset/sequences/00/image_0/" << std::setw(6) << std::setfill('0') << i << ".png";
+    ss << "/media/slam007/Friday/Dataset/KITTI/kitti_odometry/sequences/00/image_0/" << std::setw(6) << std::setfill('0') << i << ".png";
 
     cv::Mat image = cv::imread(ss.str(), 0);
     cv::Mat mask;
@@ -83,7 +83,7 @@ void testVocCreation(const vector<vector<cv::Mat>> &features, vector<pair<int, i
   for (int i = 0; i < NIMAGES; i++)
   {
     stringstream ss;
-    ss << "/home/leejaewon/RAIL/dataset/sequences/00/image_0/" << std::setw(6) << std::setfill('0') << i << ".png";
+    ss << "/media/slam007/Friday/Dataset/KITTI/kitti_odometry/sequences/00/image_0/" << std::setw(6) << std::setfill('0') << i << ".png";
     cv::Mat image = cv::imread(ss.str(), 0);
     cv::imshow("img_loop_evaluate", image);
 

@@ -20,11 +20,11 @@ using cv::Size;
 using cv::TermCriteria;
 
 // #define MAX_FRAME 2000
-#define MAX_FRAME 2000
-#define MIN_NUM_FEAT 2000
+#define MAX_FRAME 500
+#define MIN_NUM_FEAT 500
 
-const static char *dataset_images_location = "/home/leejaewon/RAIL/dataset/sequences/00/image_0";
-const static char *dataset_poses_location = "/home/leejaewon/RAIL/dataset/poses/00.txt";
+const static char *dataset_images_location = "/media/slam007/Friday/Dataset/KITTI/kitti_odometry/sequences/00/image_0";
+const static char *dataset_poses_location = "/media/slam007/Friday/Dataset/KITTI/kitti_odometry/sequences/poses/00.txt";
 
 vector<Point2f> getGreyCamGroundPoses()
 {
