@@ -46,6 +46,7 @@ void wait()
 
 int main()
 {
+  //Step1 创建特征点
   vector<vector<cv::Mat > > features;
   loadFeatures(features);
 
@@ -106,7 +107,12 @@ void testVocCreation(const vector<vector<cv::Mat > > &features)
   const int L = 3;
   const WeightingType weight = TF_IDF;
   const ScoringType scoring = L1_NORM;
-
+  /*
+      k 是每个视觉词（即聚类中心）所关联的最多特征数。
+      L 是视觉词汇表的大小，即聚类中心的数量。
+      weight 是用于加速训练的权重参数。
+      scoring 是一个字符串，用于指定评分方法。
+  */
   OrbVocabulary voc(k, L, weight, scoring);
 
   cout << "Creating a small " << k << "^" << L << " vocabulary..." << endl;
